@@ -110,8 +110,9 @@ public class DSLista extends ADSLista {
 			zbir1 += pom.podatak;
 			pom = pom.sledeci;
 		}
-		while (p.sledeci != null) {
-			zbir2 += p.sledeci.podatak;
+		pom = p.sledeci;
+		while (p != null) {
+			zbir2 += p.podatak;
 			p = p.sledeci;
 		}
 
@@ -121,14 +122,15 @@ public class DSLista extends ADSLista {
 
 		if (zbir1 > zbir2) {
 			while (pom != p) {
-				System.out.println(pom.podatak + " ");
+				System.out.print(pom.podatak + " ");
 				pom = pom.sledeci;
 			}
 		}
 		if (zbir2 > zbir1) {
-			while (p != null) {
-				System.out.println(p.podatak + " ");
-				p = p.sledeci;
+			pom = p;
+			while (pom != null) {
+				System.out.print(pom.podatak + " ");
+				pom = pom.sledeci;
 			}
 		}
 	}
