@@ -111,9 +111,9 @@ public class DSLista extends ADSLista {
 			pom = pom.sledeci;
 		}
 		pom = p.sledeci;
-		while (p != null) {
-			zbir2 += p.podatak;
-			p = p.sledeci;
+		while (pom != null) {
+			zbir2 += pom.podatak;
+			pom = pom.sledeci;
 		}
 
 		System.out.println(zbir1);
